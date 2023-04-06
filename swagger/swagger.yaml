@@ -1,0 +1,31 @@
+openapi: 3.0.3
+servers:
+  - url: http://localhost:8080/
+info:
+  description: This system provides endpoints for CRUD operations for a library management system. Try out the various endpoints of our system using this swagger. This API was built with SpringBoot, MongoDB. The members of this team are Deepika Malini Rajasekar, Abdul Mughees,Rajeev Sah,Kedar Kandel 
+  version: 1.0.0
+  title: Online Library Backend Service
+  contact:
+    email: deepirajsekar03@gmail.com
+  license:
+    name: Apache 2.0
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+tags:
+  - name: books
+    description: This endpoint allows CRUD operations for books
+  - name: authors
+    description: This endpoint allows CRUD operations for authors
+  - name: users
+    description: This endpoint deals with user info and user actions
+  - name: genres
+    description: This endpoint allows CRUD operations for genres
+  - name: reservations
+    description: This endpoint allows authenticated user to reserve and return books
+paths:
+  /genres:
+    $ref: "./components/genre/Genre.yaml"
+
+components:
+  schemas:
+    Genre:
+      $ref: "./schemas/Genre.yaml"

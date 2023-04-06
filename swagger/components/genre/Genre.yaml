@@ -1,0 +1,12 @@
+get:
+  tags:
+    - "genres"
+  summary: "Get all Genres"
+  description: "Returns a list of genres along with the number of titles under each category"
+  responses:
+    "200":
+      description: "successful operation"
+      schema:
+        type: "array"
+        items:
+          $ref: "../schemas/Genre.yaml"
